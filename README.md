@@ -6,6 +6,10 @@ Begin by running install.sh
 
 	$ ./install.sh
 
+To skip checking if brew is installed:
+
+	$ ./install.sh --without-brew-check
+
 Using MetaMaker is quite simple really:
 
 	$ metamaker <imdb-id> <path-to-file>
