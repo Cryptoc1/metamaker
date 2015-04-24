@@ -12,6 +12,7 @@ You will then be prompted for the IMdB URL for the movie and the program will wr
 * MP4Box
 
 MP4Box can be installed with brew
-''' brew install mp4box
+
+	brew install mp4box
 
 #### Plain and Simple
