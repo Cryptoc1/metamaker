@@ -14,6 +14,8 @@ Or, you can use the interactive console by running:
 
 	$ metamaker
 
+## Things to Watch-out For
+* If any directories that you enter include unicode characters, the program will crash.
 
 ## Dependencies
 * MP4Box
@@ -22,6 +24,6 @@ MP4Box can be installed with brew
 
 	$ brew install mp4box
 
-Note that *__install.sh__* installs mp4box for you.
+Note that *install.sh* installs mp4box for you.
 
 #### Plain and Simple
