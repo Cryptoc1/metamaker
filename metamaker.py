@@ -27,6 +27,7 @@ def main(id, dir):
     cov_path = os.path.expanduser("~/temp/" + id + ".jpg")
    
     print "Writing data to file..."
+    print dir
     os.system("MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + mov['genre'][0] + "\":writer=\"" + mov['writer'][0]['name'] + "\":name=\"" + mov['title'] + "\":created=\"" + str(mov['year']) + "\":encoder=\"MP4Box\" " + dir + "")
 
     print "Process complete, exiting."
