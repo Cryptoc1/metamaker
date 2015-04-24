@@ -22,4 +22,6 @@ MP4Box can be installed with brew
 
 	$ brew install mp4box
 
+Note that *__install.sh__* installs mp4box for you.
+
 #### Plain and Simple
