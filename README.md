@@ -1,5 +1,5 @@
 # MetaMaker
-MetaMaker is a simple pyhton utility I created to write metadata to movie file.
+MetaMaker is a simple pyhton utility I created to write metadata to movie file. By default, MetaMaker writes all metadata that MP4Box supports that can be retreived from IMDb.
 
 ## How To Use
 Begin by running install.sh
