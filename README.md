@@ -1,5 +1,5 @@
 # MetaMaker
-MetaMaker is a simple pyhton utility I created to write metadata to movie file (mp4, m4v, mkv, avi, wmv).
+MetaMaker is a simple pyhton utility I created to write metadata to movie file (mp4, ~~m4v, mkv, avi, wmv~~).
 
 ## How To Use
 Using MetaMaker is quite simple really:
