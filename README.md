@@ -8,7 +8,7 @@ Begin by running install.sh
 
 Using MetaMaker is quite simple really:
 
-	$ metamaker <imdb id> <path-to-file>
+	$ metamaker <imdb-id> <path-to-file>
 
 Or, you can use the interactive console by running:
 
