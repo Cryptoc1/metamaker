@@ -2,11 +2,18 @@
 MetaMaker is a simple pyhton utility I created to write metadata to movie file (mp4, ~~m4v, mkv, avi, wmv~~).
 
 ## How To Use
+Begin by running install.sh
+
+	$ ./install.sh
+
 Using MetaMaker is quite simple really:
 
-	$ metamaker foo.mp4
+	$ metamaker <imdb id> <path-to-file>
 
-You will then be prompted for the IMdB URL for the movie and the program will write the metadata for you.
+Or, you can use the interactive console by running:
+
+	$ metamaker
+
 
 ## Dependencies
 * MP4Box
