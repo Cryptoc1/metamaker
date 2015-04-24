@@ -21,11 +21,11 @@ Or, you can use the interactive console by running:
 Note about platform support: MetaMaker was built with OS X in mind, and has only been tested on my Mac. Further platform testing isn't planned for future development.
 
 ## Video formats supported
- [x] mp4
- [ ] m4v
- [ ] avi
- [ ] mkv
- [ ] wmv
+- [x] mp4
+- [ ] m4v
+- [ ] avi
+- [ ] mkv
+- [ ] wmv
 
 ## Things to Watch-out For
 * If any directories that you enter include unicode characters, the program will crash.
