@@ -35,7 +35,8 @@ Note about platform support: MetaMaker was built with OS X in mind, and has only
 \* Writing tags to avi and mkv files only works after they've been converted to mp4 (using ffmpeg).
 
 ## Things to Watch-out For
-* If any directories that you enter include unicode characters, the program will crash.
+* If any directories that you enter include unicode characters, the program will crash
+* The program will throw a KeyError if IMDb doesn't have tag data on their servers. (refer to TODO.md and issue \#1 for more info)
 
 ## Dependencies
 * MP4Box
