@@ -29,10 +29,10 @@ Note about platform support: MetaMaker was built with OS X in mind, and has only
 ## Video formats supported
 - [x] mp4
 - [x] m4v
-- [x] avi<sup>\*</sup>
-- [x] mkv<sup>\*</sup>
+- [x] avi\*
+- [x] mkv\*
 
-<sup>\*</sup> Writing tags to avi and mkv files only works after they've been converted to mp4 (using ffmpeg).
+\* Writing tags to avi and mkv files only works after they've been converted to mp4 (using ffmpeg).
 
 ## Things to Watch-out For
 * If any directories that you enter include unicode characters, the program will crash.
