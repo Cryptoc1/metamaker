@@ -25,7 +25,9 @@ Note about platform support: MetaMaker was built with OS X in mind, and has only
 - [ ] m4v
 - [ ] avi
 - [ ] mkv
-- [ ] wmv
+~~- [ ] wmv~~
+
+wmv support won't be included because most movies aren't distributed using wmv.
 
 ## Things to Watch-out For
 * If any directories that you enter include unicode characters, the program will crash.
