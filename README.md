@@ -18,7 +18,7 @@ Or, you can use the interactive console by running:
 
 	$ metamaker
 
-I feature that I'm wuite proud of in MetaMaker, is batch processing:
+A feature that I'm quite proud of in MetaMaker, is batch processing:
 
 	$ metamaker --batch <batch-file>
 
