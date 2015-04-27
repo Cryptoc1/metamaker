@@ -28,20 +28,27 @@ Note about platform support: MetaMaker was built with OS X in mind, and has only
 
 ## Video formats supported
 - [x] mp4
-- [ ] m4v
-- [ ] avi
-- [ ] mkv
+- [x] m4v
+- [x] avi<sup>\*</sup>
+- [x] mkv<sup>\*</sup>
+
+<sup>\*</sup> Writing tags to avi and mkv files only works after they've been converted to mp4 (using ffmpeg).
 
 ## Things to Watch-out For
 * If any directories that you enter include unicode characters, the program will crash.
 
 ## Dependencies
 * MP4Box
+* ffmpeg
 
-MP4Box can be installed with brew
+MP4Box can be installed with brew:
 
 	$ brew install mp4box
 
-Note that *install.sh* installs mp4box for you (unless you supply *--without-brew-check*).
+ffmpeg can also be installed using brew:
+
+	$ brew install ffmpeg
+
+Note that *install.sh* installs dependencies for you (unless you supply *--without-brew-check*).
 
 #### Plain and Simple
