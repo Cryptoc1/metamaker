@@ -25,16 +25,34 @@ def main(id, dir):
     cov_url = mov['cover']
     os.system("wget -O ~/temp/" + id + ".jpg " + cov_url)
     cov_path = os.path.expanduser("~/temp/" + id + ".jpg")
-   
-    print "Writing data to file..."
-    print dir
-    os.system("MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + mov['genre'][0] + "\":writer=\"" + mov['writer'][0]['name'] + "\":name=\"" + mov['title'] + "\":created=\"" + str(mov['year']) + "\":encoder=\"MP4Box\" " + dir + "")
 
-    print "Process complete, exiting."
-    sys.exit()
+    write_data(cov_path, mov, dir)
+
+    print "Writing complete"
+
+def batch(b_file, interactive):
+    if interactive:
+        print "Please enter path to the batch file"
+        b_file = raw_input("> ")
+    b_file = os.path.abspath(b_file)
+    bf = open(b_file)
+    for l in bf.readlines():
+        l = l.split(':')
+        main(l[0], l[1])
+    bf.close()
+
+def write_data(cov_path, mov, dir):
+    print "Writing data to file..."
+    os.system("MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + mov['genre'][0] + "\":writer=\"" + mov['writer'][0]['name'] + "\":name=\"" + mov['title'] + "\":created=\"" + str(mov['year']) + "\":encoder=\"MP4Box\" " + dir + "")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        main(sys.argv[1], sys.argv[2])
+        if sys.argv[1] == "--batch":
+            if len(sys.argv) > 2:
+                batch(sys.argv[2], False)
+            else:
+                batch(None, True)
+        else:
+            main(sys.argv[1], sys.argv[2])
     else:
         main(None, None)
