@@ -3,7 +3,7 @@ A useful feature I've integrated into MetaMaker is *batch processing*. To use ba
 
 	$ metamker --batch <batch-file>
 
-Where *batch-file* is a plain-text file that uses a "imdb-id:path-to-file" format. Example (example.batch):
+Where *batch-file* is a plain-text file that uses a "imdb-id:path-to-file" format. Example ([example.batch](https://github.com/Cryptoc1/metamaker/blob/master/example.batch)):
 
 	tt1549572:Another Earth/Another Earth.mp4
 	tt1758692:Like Crazy/Like Crazy.mp4
