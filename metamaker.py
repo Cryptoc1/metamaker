@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import imdb
-import os, sys
+import os, sys, subprocess as sp
 
 def main(id, dir):
     api = imdb.IMDb()
@@ -23,7 +23,11 @@ def main(id, dir):
 
     print "Downloading cover to ~/temp..."
     cov_url = mov['cover']
-    os.system("wget -O ~/temp/" + id + ".jpg " + cov_url)
+    wget = ['wget',
+            '-O', '~/temp/' + id + '.jpg',
+            cov_url]
+    sp.Popen(wget, stdout = sp.PIPE).wait()
+    # os.system("wget -O ~/temp/" + id + ".jpg " + cov_url)
     cov_path = os.path.expanduser("~/temp/" + id + ".jpg")
 
     write_data(cov_path, mov, dir)
@@ -43,7 +47,10 @@ def batch(b_file, interactive):
 
 def write_data(cov_path, mov, dir):
     print "Writing data to file..."
-    os.system("MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + mov['genre'][0] + "\":writer=\"" + mov['writer'][0]['name'] + "\":name=\"" + mov['title'] + "\":created=\"" + str(mov['year']) + "\":encoder=\"MP4Box\" " + dir + "")
+    mp4box = ['MP4Box',
+            '-itags', 'cover="' + cov_path + '":tool="metamaker":genre="' + mov['genre'][0] + '":writer="' + mov['writer'][0]['name'] + '":name="' + mov['title'] + '":created="' + str(mov['year']) + '":encoder="MP4Box" ' + dir + '']
+    sp.Popen(mp4box,  stdout = sp.PIPE).wait()
+    # os.system("MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + mov['genre'][0] + "\":writer=\"" + mov['writer'][0]['name'] + "\":name=\"" + mov['title'] + "\":created=\"" + str(mov['year']) + "\":encoder=\"MP4Box\" " + dir + "")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
