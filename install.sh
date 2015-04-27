@@ -40,6 +40,9 @@ if [ -f "/usr/bin/metamaker" ]; then
 	fi
 fi
 
+echo " Install imdbpy using pip (ignore warnings if imdbpy is already installed";
+pip install imdbpy;
+
 echo " Copying metamaker.py to /usr/bin as metamaker";
 sudo cp metamaker.py /usr/bin/metamaker;
 echo " [+] metamaker.py copied to /usr/bin as metamaker";
