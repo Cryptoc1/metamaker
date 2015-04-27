@@ -16,7 +16,7 @@ def main(id, dir):
         dir = os.path.abspath(raw_input("> "))
     else:
         dir = os.path.abspath(dir)
-        dir = dir.replace(" ", "\\ ")
+        dir = dir.replace(" ", "\\ ").replace("\n", "")
 
     if re.search('(\.mkv)|(\.avi)', dir):
         print  "[!] It looks like you aren't inputting a mp4 or m4v. In order to avoid corruption to the file, tags can't be written to the submitted file type."
@@ -59,7 +59,7 @@ def write_data(cov_path, mov, dir):
     os.system(mp4box)
 
 def convert(dir):
-    n_dir = re.sub('(\.mkv)|(\.avi)', '.mp4', dir)
+    n_dir = re.sub('(\.mkv)|(\.avi)', '.mp4', dir).replace("\n", "")
     print "Starting ffmpeg. How long this will take, and the quality of the conversion is dependant upon your system."
     os.system("ffmpeg -i " + dir + " -vcodec copy -acodec copy " + n_dir)
     print "[+] Conversion complete, returning to write tags"
