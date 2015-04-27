@@ -18,6 +18,12 @@ Or, you can use the interactive console by running:
 
 	$ metamaker
 
+I feature that I'm wuite proud of in MetaMaker, is batch processing:
+
+	$ metamaker --batch <batch-file>
+
+More information about how to use batch processing can be found in *BATCH.md*
+
 Note about platform support: MetaMaker was built with OS X in mind, and has only been tested on my Mac. Further platform testing isn't planned for future development.
 
 ## Video formats supported
