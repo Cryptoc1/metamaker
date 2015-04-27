@@ -18,4 +18,4 @@ Within my computer, I store my movies in a folder suitabley named *Movies*. To b
 
 	$ ls */*.mp4 >> metamaker.batch
 
-This will enter all the mp4s into seperate lines in plain-text. From there all I have to do is enter the IMDb id for the movie followed by a colon before the path to each movie. (See example.batch for more info about syntax)
+This will enter all the mp4s into seperate lines in plain-text. From there all I have to do is enter the IMDb id for the movie followed by a colon before the path to each movie. (See [example.batch](https://github.com/Cryptoc1/metamaker/blob/master/example.batch) for more info about syntax)
