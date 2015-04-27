@@ -42,6 +42,6 @@ MP4Box can be installed with brew
 
 	$ brew install mp4box
 
-Note that *install.sh* installs mp4box for you.
+Note that *install.sh* installs mp4box for you (unless you supply *--without-brew-check*).
 
 #### Plain and Simple
