@@ -22,7 +22,7 @@ A feature that I'm quite proud of in MetaMaker, is batch processing:
 
 	$ metamaker --batch <batch-file>
 
-More information about how to use batch processing can be found in *BATCH.md*
+More information about how to use batch processing can be found in [BATCH.md](https://github.com/Cryptoc1/metamaker/blob/master/BATCH.md)
 
 Note about platform support: MetaMaker was built with OS X in mind, and has only been tested on my Mac. Further platform testing isn't planned for future development.
 
@@ -36,7 +36,7 @@ Note about platform support: MetaMaker was built with OS X in mind, and has only
 
 ## Things to Watch-out For
 * If any directories that you enter include unicode characters, the program will crash
-* The program will throw a KeyError if IMDb doesn't have tag data on their servers. (refer to TODO.md and issue \#1 for more info)
+* The program will throw a KeyError if IMDb doesn't have tag data on their servers. (refer to [TODO.md](https://github.com/Cryptoc1/metamaker/blob/master/TODO.md) and [Issue \#1](https://github.com/Cryptoc1/metamaker/issues/1) for more info)
 
 ## Dependencies
 * MP4Box
