@@ -4,20 +4,24 @@ function brew_check {
 	if [ -f "/usr/local/bin/brew" ]; then
 		echo " It looks like you have brew installed, so we're going to install mp4box";
 		echo " Updating brew (this may take a while)";
-		brew update; brew install mp4box;
+		install_deps;
 	else
 		echo " [!] It doesn't look like you have brew installed. You're going to want to do this so that MP4Box can be installed.";
 		echo " Or, if you'd like, we can install it now? (y/n): "
 		read input;
 		if [ "$input" = "y" ]; then
 			ruby -e "\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-			echo " Now that brew is installed, we'll install MP4Box...";
-			brew update; brew install mp4box;
+			echo " Now that brew is installed, we'll install our dependencies";
+			install_deps
 		else 
 			echo "Okay, exiting..."
 			exit;
 		fi
 	fi
+}
+
+function install_deps {
+	brew update; brew install mp4box ffmpeg;
 }
 
 arg=("$@");
