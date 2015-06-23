@@ -55,7 +55,7 @@ def batch(b_file, interactive):
 
 def write_data(cov_path, mov, dir):
     print "Writing data to file..."
-    mp4box = "MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + mov['genre'][0] + "\":writer=\"" + mov['writer'][0]['name'] + "\":name=\"" + mov['title'] + "\":created=\"" + str(mov['year']) + "\":encoder=\"MP4Box\" " + dir + ""
+    mp4box = "MP4Box -itags cover=\"" + cov_path + "\":tool=\"metamaker\":genre=\"" + str(mov['genre'][0]) + "\":writer=\"" + str(mov['writer'][0]['name']) + "\":name=\"" + str(mov['title']).replace("\"", "\\\"") + "\":created=\"" + str(mov['year']) + "\" " + str(dir).replace("'", "\\'")
     os.system(mp4box)
 
 def convert(dir):
